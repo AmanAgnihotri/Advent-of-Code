@@ -11,6 +11,10 @@
 - Day 5: Binary Boarding [[info](https://adventofcode.com/2020/day/5), [code](/src/BinaryBoarding)]
 - Day 6: Custom Customs [[info](https://adventofcode.com/2020/day/6), [code](/src/CustomCustoms)]
 
+### 2019
+
+- Day 1: The Tyranny of the Rocket Equation [[info](https://adventofcode.com/2019/day/1), [code](/src/RocketEquation)]
+
 ### License
 
 Advent-of-Code is an attempt at [Advent of Code](https://adventofcode.com/) problems in C#.  
