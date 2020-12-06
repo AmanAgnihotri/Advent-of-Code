@@ -4,8 +4,8 @@
 
 ### 2020
 
-- Day 1: Report Repair [[info](https://adventofcode.com/2020/day/1), [code](src/ReportRepair)]
-- Day 2: Password Philosophy [[info](https://adventofcode.com/2020/day/2), [code](src/PasswordPhilosophy)]
+- Day 1: Report Repair [[info](https://adventofcode.com/2020/day/1), [code](/src/ReportRepair)]
+- Day 2: Password Philosophy [[info](https://adventofcode.com/2020/day/2), [code](/src/PasswordPhilosophy)]
 
 ### License
 
