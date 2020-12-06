@@ -6,6 +6,7 @@
 
 - Day 1: Report Repair [[info](https://adventofcode.com/2020/day/1), [code](/src/ReportRepair)]
 - Day 2: Password Philosophy [[info](https://adventofcode.com/2020/day/2), [code](/src/PasswordPhilosophy)]
+- Day 3: Toboggan Trajectory [[info](https://adventofcode.com/2020/day/3), [code](/src/TobogganTrajectory)]
 
 ### License
 
