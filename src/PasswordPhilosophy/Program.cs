@@ -7,64 +7,37 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace PasswordPhilosophy
+var regex = new Regex(
+  @"^(\d+)-(\d+)\s{1}(\w):\s{1}(\w+)$",
+  RegexOptions.Singleline | RegexOptions.Compiled,
+  TimeSpan.FromSeconds(1));
+
+var inputs = File.ReadAllLines("Input.txt")
+  .Select(line => regex.Match(line))
+  .Where(match => match.Success)
+  .Select(match => (
+    int.Parse(match.Groups[1].Value),
+    int.Parse(match.Groups[2].Value),
+    char.Parse(match.Groups[3].Value),
+    match.Groups[4].Value))
+  .ToImmutableList();
+
+PrintCount(data =>
 {
-  public static class Program
-  {
-    public static void Main()
-    {
-      var inputs = GetInputs();
+  var (min, max, key, password) = data;
 
-      PrintCount(inputs, HasValidOccurrences);
-      PrintCount(inputs, HasValidPositioning);
-    }
+  var count = password.Count(ch => ch == key);
 
-    private static void PrintCount(
-      ImmutableList<Input> inputs,
-      Func<Input, bool> predicate) =>
-      Console.WriteLine(inputs.Count(predicate));
+  return count >= min && count <= max;
+});
 
-    private static bool HasValidOccurrences(Input input)
-    {
-      var (min, max, character, password) = input;
+PrintCount(data =>
+{
+  var (first, other, key, password) = data;
 
-      var count = password.Count(c => c == character);
+  return password[first - 1] == key ^
+         password[other - 1] == key;
+});
 
-      return count >= min && count <= max;
-    }
-
-    private static bool HasValidPositioning(Input input)
-    {
-      var (initial, final, character, password) = input;
-
-      return (password[initial - 1] == character) ^
-             (password[final - 1] == character);
-    }
-
-    public sealed record Input(
-      int Initial,
-      int Final,
-      char Character,
-      string Password);
-
-    private static ImmutableList<Input> GetInputs()
-    {
-      var regex = new Regex(
-        @"^(\d+)-(\d+)\s{1}(\w):\s{1}(\w+)$",
-        RegexOptions.Singleline | RegexOptions.Compiled,
-        TimeSpan.FromSeconds(1));
-
-      return File.ReadAllLines("Input.txt")
-        .Select(line => regex.Match(line))
-        .Where(match => match.Success)
-        .Select(match => ToInput(match.Groups))
-        .ToImmutableList();
-
-      static Input ToInput(GroupCollection groups) => new(
-        int.Parse(groups[1].Value),
-        int.Parse(groups[2].Value),
-        char.Parse(groups[3].Value),
-        groups[4].Value);
-    }
-  }
-}
+void PrintCount(Func<(int, int, char, string), bool> predicate) =>
+  Console.WriteLine(inputs.Count(predicate));
