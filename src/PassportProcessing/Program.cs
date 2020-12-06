@@ -27,13 +27,11 @@ namespace PassportProcessing
 
       Console.WriteLine(entries
         .Where(entry => mandatoryKeys.IsSubsetOf(entry.Keys))
-        .Count(pairs => pairs.All(IsStrictlyValid)));
+        .Count(entry => entry.All(pair => IsValid(pair.Key, pair.Value))));
     }
 
-    private static bool IsStrictlyValid(KeyValuePair<string, string> pair)
+    private static bool IsValid(string key, string value)
     {
-      var (key, value) = pair;
-
       return key switch
       {
         "byr" => IsValidBirthYear(),
