@@ -9,6 +9,7 @@
 - Day 3: Toboggan Trajectory [[info](https://adventofcode.com/2020/day/3), [code](/src/TobogganTrajectory)]
 - Day 4: Passport Processing [[info](https://adventofcode.com/2020/day/4), [code](/src/PassportProcessing)]
 - Day 5: Binary Boarding [[info](https://adventofcode.com/2020/day/5), [code](/src/BinaryBoarding)]
+- Day 6: Custom Customs [[info](https://adventofcode.com/2020/day/6), [code](/src/CustomCustoms)]
 
 ### License
 

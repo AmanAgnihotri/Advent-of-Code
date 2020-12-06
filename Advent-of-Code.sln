@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportProcessing", "src\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryBoarding", "src\BinaryBoarding\BinaryBoarding.csproj", "{3E6FDCEF-A1E5-4A92-8370-CC80797F959D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCustoms", "src\CustomCustoms\CustomCustoms.csproj", "{4A34E9A6-BD9F-42A9-B600-9973B30C97C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,7 @@ Global
 		{8362BD69-BCBE-4A03-82AD-43933B520973} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
 		{F0064841-9261-494E-9568-121EB1C35168} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
 		{3E6FDCEF-A1E5-4A92-8370-CC80797F959D} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
+		{4A34E9A6-BD9F-42A9-B600-9973B30C97C8} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2792ADAD-2527-46E8-AE72-76AB01D88599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -45,5 +48,9 @@ Global
 		{3E6FDCEF-A1E5-4A92-8370-CC80797F959D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E6FDCEF-A1E5-4A92-8370-CC80797F959D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E6FDCEF-A1E5-4A92-8370-CC80797F959D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A34E9A6-BD9F-42A9-B600-9973B30C97C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A34E9A6-BD9F-42A9-B600-9973B30C97C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A34E9A6-BD9F-42A9-B600-9973B30C97C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A34E9A6-BD9F-42A9-B600-9973B30C97C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
