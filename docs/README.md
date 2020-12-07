@@ -19,6 +19,7 @@
 ### 2015
 
 - Day 1: Not Quite Lisp [[info](https://adventofcode.com/2015/day/1), [code](/src/NotQuiteLisp)]
+- Day 2: I Was Told There Would Be No Math [[info](https://adventofcode.com/2015/day/2), [code](/src/RectangularPrism)]
 
 ### License
 
