@@ -16,6 +16,10 @@
 
 - Day 1: The Tyranny of the Rocket Equation [[info](https://adventofcode.com/2019/day/1), [code](/src/RocketEquation)]
 
+### 2015
+
+- Day 1: Not Quite Lisp [[info](https://adventofcode.com/2015/day/1), [code](/src/NotQuiteLisp)]
+
 ### License
 
 Advent-of-Code is an attempt at [Advent of Code](https://adventofcode.com/) problems in C#.  
