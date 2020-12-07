@@ -6,7 +6,7 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 
-var numbers = File.ReadAllLines("Input.txt")
+var numbers = File.ReadLines("Input.txt")
   .Select(int.Parse)
   .ToImmutableHashSet();
 

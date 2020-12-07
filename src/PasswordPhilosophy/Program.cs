@@ -12,7 +12,7 @@ var regex = new Regex(
   RegexOptions.Singleline | RegexOptions.Compiled,
   TimeSpan.FromSeconds(1));
 
-var inputs = File.ReadAllLines("Input.txt")
+var inputs = File.ReadLines("Input.txt")
   .Select(line => regex.Match(line))
   .Where(match => match.Success)
   .Select(match => (

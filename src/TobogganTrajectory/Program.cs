@@ -9,7 +9,7 @@ using System.Linq;
 
 const char tree = '#';
 
-var map = File.ReadAllLines("Input.txt")
+var map = File.ReadLines("Input.txt")
   .Select(line => new BitArray(line.Select(ch => ch == tree).ToArray()))
   .ToImmutableList();
 

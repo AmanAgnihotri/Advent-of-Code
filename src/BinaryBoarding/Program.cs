@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 
 var regex = new Regex(@"^([FB]{7})([LR]{3})$", RegexOptions.Compiled);
 
-var seatIds = File.ReadAllLines("Input.txt")
+var seatIds = File.ReadLines("Input.txt")
   .Select(GetSeatId)
   .ToImmutableSortedSet();
 

@@ -6,7 +6,7 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 
-var masses = File.ReadAllLines("Input.txt")
+var masses = File.ReadLines("Input.txt")
   .Select(int.Parse)
   .ToImmutableList();
 
