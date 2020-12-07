@@ -10,6 +10,7 @@
 - Day 4: Passport Processing [[info](https://adventofcode.com/2020/day/4), [code](/src/PassportProcessing)]
 - Day 5: Binary Boarding [[info](https://adventofcode.com/2020/day/5), [code](/src/BinaryBoarding)]
 - Day 6: Custom Customs [[info](https://adventofcode.com/2020/day/6), [code](/src/CustomCustoms)]
+- Day 7: Handy Haversacks [[info](https://adventofcode.com/2020/day/7), [code](/src/HandyHaversacks)]
 
 ### 2019
 
