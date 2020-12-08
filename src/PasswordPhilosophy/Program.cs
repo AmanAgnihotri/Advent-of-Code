@@ -22,22 +22,19 @@ var inputs = File.ReadLines("Input.txt")
     match.Groups[4].Value))
   .ToImmutableList();
 
-PrintCount(data =>
+Console.WriteLine(inputs.Count(data =>
 {
   var (min, max, key, password) = data;
 
   var count = password.Count(ch => ch == key);
 
   return count >= min && count <= max;
-});
+}));
 
-PrintCount(data =>
+Console.WriteLine(inputs.Count(data =>
 {
   var (first, other, key, password) = data;
 
   return password[first - 1] == key ^
          password[other - 1] == key;
-});
-
-void PrintCount(Func<(int, int, char, string), bool> predicate) =>
-  Console.WriteLine(inputs.Count(predicate));
+}));
