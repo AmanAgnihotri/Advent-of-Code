@@ -10,23 +10,23 @@ var masses = File.ReadLines("Input.txt")
   .Select(int.Parse)
   .ToImmutableList();
 
+Console.WriteLine(masses.Sum(GetFuel));
+Console.WriteLine(masses.Sum(GetTotalFuel));
+
 static int GetFuel(int mass) => mass / 3 - 2;
 
 static int GetTotalFuel(int mass)
 {
-  static int GetTotalFuel(int mass, int total)
+  static int Loop(int mass, int total)
   {
     var fuel = GetFuel(mass);
 
     return fuel switch
     {
       <= 0 => total,
-      _ => GetTotalFuel(fuel, total + fuel)
+      _ => Loop(fuel, total + fuel)
     };
   }
 
-  return GetTotalFuel(mass, 0);
+  return Loop(mass, 0);
 }
-
-Console.WriteLine(masses.Sum(GetFuel));
-Console.WriteLine(masses.Sum(GetTotalFuel));
