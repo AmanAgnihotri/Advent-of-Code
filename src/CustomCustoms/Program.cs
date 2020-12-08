@@ -15,8 +15,8 @@ var groups = Regex
     .ToImmutableList())
   .ToImmutableList();
 
-void PrintAggregatedSum(Func<Set, Set, Set> reduce) => Console.WriteLine(
-  groups.Sum(group => group.Aggregate(group.First(), reduce).Count));
+Console.WriteLine(GetAggregatedSum((a, b) => a.Union(b)));
+Console.WriteLine(GetAggregatedSum((a, b) => a.Intersect(b)));
 
-PrintAggregatedSum((a, b) => a.Union(b));
-PrintAggregatedSum((a, b) => a.Intersect(b));
+int GetAggregatedSum(Func<Set, Set, Set> reduce) =>
+  groups.Sum(group => group.Aggregate(group.First(), reduce).Count);
