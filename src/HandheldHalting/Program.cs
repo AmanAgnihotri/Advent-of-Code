@@ -12,7 +12,7 @@ using Instructions =
 
 var regex = new Regex(@"^(\w+) ([+-]\d+)$", RegexOptions.Compiled);
 
-Instructions instructions = File.ReadLines("Input.txt")
+var instructions = File.ReadLines("Input.txt")
   .Select(line => regex.Match(line).Groups)
   .Select(groups => (groups[1].Value, int.Parse(groups[2].Value)))
   .ToImmutableList();
