@@ -18,11 +18,11 @@ var data = File.ReadLines("Input.txt")
     .ToImmutableArray())
   .ToImmutableList();
 
+Console.WriteLine(data.Sum(GetWrapArea));
+Console.WriteLine(data.Sum(GetRibbonLength));
+
 static int GetWrapArea(Dimensions ds) =>
   2 * ds[0] * ds[1] + 2 * ds[1] * ds[2] + 2 * ds[0] * ds[2] + ds[0] * ds[1];
 
 static int GetRibbonLength(Dimensions ds) =>
   2 * ds[0] + 2 * ds[1] + ds[0] * ds[1] * ds[2];
-
-Console.WriteLine(data.Sum(GetWrapArea));
-Console.WriteLine(data.Sum(GetRibbonLength));
