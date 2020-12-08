@@ -10,8 +10,8 @@ var numbers = File.ReadLines("Input.txt")
   .Select(int.Parse)
   .ToImmutableHashSet();
 
-Print(GetProduct(2020, 2));
-Print(GetProduct(2020, 3));
+Console.WriteLine(GetProduct(2020, 2));
+Console.WriteLine(GetProduct(2020, 3));
 
 int? GetProduct(int sum, int count, int product = 1) => count switch
 {
@@ -23,6 +23,3 @@ int? GetProduct(int sum, int count, int product = 1) => count switch
     .Select(number => GetProduct(sum - number, count - 1, number * product))
     .FirstOrDefault(result => result.HasValue)
 };
-
-static void Print(int? value) =>
-  Console.WriteLine(value is null ? "None" : value.ToString());
