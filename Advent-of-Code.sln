@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangularPrism", "src\Rec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandheldHalting", "src\HandheldHalting\HandheldHalting.csproj", "{B497FBE9-653D-4CB1-BF02-5A0F5F53D247}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodingError", "src\EncodingError\EncodingError.csproj", "{AE3F3859-E40F-48B5-8B11-1CB2CE9AF4CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,7 @@ Global
 		{EBA7773D-A111-40EE-9E10-A261851E5B95} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
 		{D41E526F-4CF7-4431-8C2F-357913FF5D6E} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
 		{B497FBE9-653D-4CB1-BF02-5A0F5F53D247} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
+		{AE3F3859-E40F-48B5-8B11-1CB2CE9AF4CF} = {96C9555E-3C97-4AB3-8331-E09C40B3562F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2792ADAD-2527-46E8-AE72-76AB01D88599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -87,5 +90,9 @@ Global
 		{B497FBE9-653D-4CB1-BF02-5A0F5F53D247}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B497FBE9-653D-4CB1-BF02-5A0F5F53D247}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B497FBE9-653D-4CB1-BF02-5A0F5F53D247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3F3859-E40F-48B5-8B11-1CB2CE9AF4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3F3859-E40F-48B5-8B11-1CB2CE9AF4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3F3859-E40F-48B5-8B11-1CB2CE9AF4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3F3859-E40F-48B5-8B11-1CB2CE9AF4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
