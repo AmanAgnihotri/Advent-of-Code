@@ -27,24 +27,18 @@ var invalidNumber = numbers
   })
   .First();
 
-var sequence = Enumerable.Range(0, numbers.Count)
-  .Select(index =>
-  {
-    var sums = numbers
-      .Skip(index)
-      .Scan((a, b) => a + b)
-      .TakeWhile(sum => sum <= invalidNumber)
-      .ToImmutableList();
+var sums = numbers.Scan((a, b) => a + b).ToImmutableSortedSet();
 
-    return sums[^1] == invalidNumber
-      ? numbers
-        .Skip(index)
-        .Take(sums.Count)
-        .OrderBy(value => value)
-        .ToImmutableList()
-      : ImmutableList<long>.Empty;
-  })
-  .First(values => values.Count > 0);
+var start = sums
+  .Select(sum => sums.IndexOf(sum - invalidNumber))
+  .FirstOrDefault(index => index >= 0);
+
+var end = sums.IndexOf(sums[start] + invalidNumber);
+
+var sequence = numbers
+  .Skip(start)
+  .Take(end - start + 1)
+  .ToImmutableSortedSet();
 
 Console.WriteLine(invalidNumber);
 Console.WriteLine(sequence[0] + sequence[^1]);
