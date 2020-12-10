@@ -33,11 +33,5 @@ int GetContainerBagsCount(string bag)
   return rules.Values.Count(IsBagContainedIn);
 }
 
-int GetContainedBagsCount(string bag)
-{
-  int GetCount(Bags bags) => bags.Count == 0
-    ? 1
-    : 1 + bags.Sum(b => b.Value * GetCount(rules[b.Key]));
-
-  return GetCount(rules[bag]) - 1;
-}
+int GetContainedBagsCount(string bag) =>
+  rules[bag].Sum(b => b.Value + b.Value * GetContainedBagsCount(b.Key));
