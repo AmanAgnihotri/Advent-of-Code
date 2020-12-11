@@ -13,6 +13,7 @@
 - Day 7: Handy Haversacks [[info](https://adventofcode.com/2020/day/7), [code](/src/HandyHaversacks)]
 - Day 8: Handheld Halting [[info](https://adventofcode.com/2020/day/8), [code](/src/HandheldHalting)]
 - Day 9: Encoding Error [[info](https://adventofcode.com/2020/day/9), [code](/src/EncodingError)]
+- Day 10: Adapter Array [[info](https://adventofcode.com/2020/day/10), [code](/src/AdapterArray)]
 
 ### 2019
 
