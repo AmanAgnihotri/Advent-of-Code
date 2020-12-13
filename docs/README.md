@@ -16,6 +16,7 @@
 |   8 | Handheld Halting    | [Info][Info-2020-08] | [Code][Code-2020-08] |
 |   9 | Encoding Error      | [Info][Info-2020-09] | [Code][Code-2020-09] |
 |  10 | Adapter Array       | [Info][Info-2020-10] | [Code][Code-2020-10] |
+|  11 | Seating System      | [Info][Info-2020-11] | [Code][Code-2020-11] |
 
 [Info-2020-01]: https://adventofcode.com/2020/day/1   "Day 1: Report Repair"
 [Info-2020-02]: https://adventofcode.com/2020/day/2   "Day 2: Password Philosophy"
@@ -27,6 +28,7 @@
 [Info-2020-08]: https://adventofcode.com/2020/day/8   "Day 8: Handheld Halting"
 [Info-2020-09]: https://adventofcode.com/2020/day/9   "Day 9: Encoding Error"
 [Info-2020-10]: https://adventofcode.com/2020/day/10  "Day 10: Adapter Array"
+[Info-2020-11]: https://adventofcode.com/2020/day/11  "Day 11: Seating System"
 
 [Code-2020-01]: /src/ReportRepair/Program.cs          "ReportRepair/Program.cs"
 [Code-2020-02]: /src/PasswordPhilosophy/Program.cs    "PasswordPhilosophy/Program.cs"
@@ -38,6 +40,7 @@
 [Code-2020-08]: /src/HandheldHalting/Program.cs       "HandheldHalting/Program.cs"
 [Code-2020-09]: /src/EncodingError/Program.cs         "EncodingError/Program.cs"
 [Code-2020-10]: /src/AdapterArray/Program.cs          "AdapterArray/Program.cs"
+[Code-2020-11]: /src/SeatingSystem/Program.cs         "SeatingSystem/Program.cs"
 
 ### 2019
 
