@@ -75,9 +75,9 @@ internal record Waypoint(int X, int Y)
 
   private Waypoint Rotate(int degrees) => degrees switch
   {
-    90 => this with {X = -Y, Y = X},
-    180 => this with {X = -X, Y = -Y},
-    270 => this with {X = Y, Y = -X},
+    90 => new Waypoint(-Y, X),
+    180 => new Waypoint(-X, -Y),
+    270 => new Waypoint(Y, -X),
     _ => this
   };
 }
