@@ -17,6 +17,7 @@
 |   9 | Encoding Error      | [Info][Info-2020-09] | [Code][Code-2020-09] |
 |  10 | Adapter Array       | [Info][Info-2020-10] | [Code][Code-2020-10] |
 |  11 | Seating System      | [Info][Info-2020-11] | [Code][Code-2020-11] |
+|  12 | Rain Risk           | [Info][Info-2020-12] | [Code][Code-2020-12] |
 
 [Info-2020-01]: https://adventofcode.com/2020/day/1   "Day 1: Report Repair"
 [Info-2020-02]: https://adventofcode.com/2020/day/2   "Day 2: Password Philosophy"
@@ -29,6 +30,7 @@
 [Info-2020-09]: https://adventofcode.com/2020/day/9   "Day 9: Encoding Error"
 [Info-2020-10]: https://adventofcode.com/2020/day/10  "Day 10: Adapter Array"
 [Info-2020-11]: https://adventofcode.com/2020/day/11  "Day 11: Seating System"
+[Info-2020-12]: https://adventofcode.com/2020/day/12  "Day 12: Rain Risk"
 
 [Code-2020-01]: /src/ReportRepair/Program.cs          "ReportRepair/Program.cs"
 [Code-2020-02]: /src/PasswordPhilosophy/Program.cs    "PasswordPhilosophy/Program.cs"
@@ -41,6 +43,7 @@
 [Code-2020-09]: /src/EncodingError/Program.cs         "EncodingError/Program.cs"
 [Code-2020-10]: /src/AdapterArray/Program.cs          "AdapterArray/Program.cs"
 [Code-2020-11]: /src/SeatingSystem/Program.cs         "SeatingSystem/Program.cs"
+[Code-2020-12]: /src/RainRisk/Program.cs              "RainRisk/Program.cs"
 
 ### 2019
 
