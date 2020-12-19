@@ -25,7 +25,7 @@ instructions.ForEach(instruction =>
 Console.WriteLine(directedShip.GetManhattanDistance());
 Console.WriteLine(waypointShip.GetManhattanDistance());
 
-internal record Ship(int X, int Y)
+internal abstract record Ship(int X, int Y)
 {
   public int GetManhattanDistance() => Math.Abs(X) + Math.Abs(Y);
 }
@@ -34,22 +34,19 @@ internal record DirectedShip(int X, int Y, int Direction) : Ship(X, Y)
 {
   public DirectedShip Apply(Instruction instruction) => instruction.Type switch
   {
+    'F' => Apply(instruction with {Type = DirectionMap[Direction]}),
     'E' => this with {X = X + instruction.Value},
     'N' => this with {Y = Y + instruction.Value},
     'W' => this with {X = X - instruction.Value},
     'S' => this with {Y = Y - instruction.Value},
     'L' => this with {Direction = (Direction + instruction.Value) % 360},
     'R' => this with {Direction = (360 + Direction - instruction.Value) % 360},
-    'F' => Direction switch
-    {
-      0 => Apply(instruction with {Type = 'E'}),
-      90 => Apply(instruction with {Type = 'N'}),
-      180 => Apply(instruction with {Type = 'W'}),
-      270 => Apply(instruction with {Type = 'S'}),
-      _ => throw new NotImplementedException()
-    },
     _ => throw new NotImplementedException()
   };
+
+  private static readonly IImmutableDictionary<int, char> DirectionMap =
+    ImmutableSortedDictionary<int, char>.Empty
+      .Add(0, 'E').Add(90, 'N').Add(180, 'W').Add(270, 'S');
 }
 
 internal record WaypointShip(int X, int Y, Waypoint Waypoint) : Ship(X, Y)
@@ -78,11 +75,10 @@ internal record Waypoint(int X, int Y)
 
   private Waypoint Rotate(int degrees) => degrees switch
   {
-    0 => this,
     90 => this with {X = -Y, Y = X},
     180 => this with {X = -X, Y = -Y},
     270 => this with {X = Y, Y = -X},
-    _ => throw new NotImplementedException()
+    _ => this
   };
 }
 
